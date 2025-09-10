@@ -1,0 +1,11 @@
+{
+  "name": "backend_chaiiaurcode",
+  "version": "1.0.0",
+  "description": "my backedn tut from yt chai aur code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sreevalli",
+  "license": "ISC"
+}
