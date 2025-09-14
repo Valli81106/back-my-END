@@ -7,8 +7,20 @@ dotenv.config({
     path: './env'
 })
 
-connectDB()
+app.use((err,req,res,next)=>{
+        console.error("Express error caught: ", err.stack);
+        res.status(500).json({message: "Something broke!"});
+    })
 
+connectDB()
+.then(()=>{
+    app.listen(process.env.PORT || 8000, ()=>{
+        console.log(`Port is runnign on: ${process.env.PORT}`)
+    })
+})
+.catch((err)=>{
+    console.log("Monog db connection failed")
+})
 
 
 /*
